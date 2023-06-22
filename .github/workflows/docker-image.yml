@@ -35,6 +35,21 @@ jobs:
       #run: docker-compose up --build
     - name: Get the date
       run: date
+    - name: Invoke the web API
+      run: |
+        curl http://fibonacci:80/fibonacci?n=0
+        sleep 5s
+        curl http://fibonacci:80/fibonacci?n=5
+        sleep 5s
+        curl http://fibonacci:80/fibonacci?n=10
+        sleep 5s
+        curl http://fibonacci:80/fibonacci?n=15
+        sleep 5s
+        curl http://fibonacci:80/fibonacci?n=20
+        sleep 5s
+        curl http://fibonacci:80/fibonacci?n=25
+        sleep 5s
+        curl http://fibonacci:80/fibonacci?n=91
 
   print-tag:
     runs-on: ubuntu-latest
