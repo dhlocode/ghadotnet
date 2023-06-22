@@ -36,6 +36,7 @@ jobs:
     - name: Get the date
       run: date
     - name: Invoke the web API
+      # Need to run this in parallel with running the app
       run: |
         curl http://fibonacci:80/fibonacci?n=0
         sleep 5s
