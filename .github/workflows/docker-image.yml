@@ -33,6 +33,8 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       #run: docker-compose up --build
+    - name: Get the date
+      run: date
 
   print-tag:
     runs-on: ubuntu-latest
