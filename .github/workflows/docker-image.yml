@@ -31,8 +31,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-      #run: docker-compose up --build
+      #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker-compose up --build
     - name: Get the date
       run: date
     - name: Invoke the web API
